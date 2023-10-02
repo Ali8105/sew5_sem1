@@ -9,7 +9,13 @@ public class FlipFlop extends Components {
 
     @Override
     void calc() {
-
+        if (this.getInputPort(0)){
+            this.pinsOut.set(0,true);
+            this.pinsOut.set(1,false);
+        }else if (this.getInputPort(1)){
+            this.pinsOut.set(0,false);
+            this.pinsOut.set(1,true);
+        }
     }
 }
 

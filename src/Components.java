@@ -42,4 +42,13 @@ abstract  class Components {
         this.pinsIn.add(srcPort,new Input(destPort,comp));
     }
 
+    /**
+     *
+     * @param inputPort vom inpout Port
+     * @return liefert den status
+     */
+    public boolean getInputPort(int inputPort){
+        return this.pinsIn.get(inputPort).state;
+    }
+
 }
