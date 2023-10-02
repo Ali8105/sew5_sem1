@@ -13,6 +13,13 @@ public class FlipFlop {
         state = false;
     }
 
+    public boolean Q(){
+        return state;
+    }
+
+    public boolean notQ(){
+        return !state;
+    }
 
     public static void main(String[] args) {
 
