@@ -1,5 +1,9 @@
 @startuml
 
+abstract class Componetes{
+
+}
+
 class Taster1 {
  + Taster1()
 }
@@ -10,6 +14,11 @@ class Taster2{
 
 class FlipFlop{
  + FlipFlop()
+ + state: int
+ + set()
+ + reset()
+ + q()
+ + notQ()
 }
 
 class LED1{

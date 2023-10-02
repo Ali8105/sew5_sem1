@@ -26,7 +26,7 @@ public class FlipFlop {
      * Q Interface
      * @return liefert den Status vom Q Interface
      */
-    public boolean Q(){
+    public boolean q(){
         return state;
     }
 
