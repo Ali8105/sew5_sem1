@@ -1,15 +1,11 @@
 @startuml
 
 abstract class Componetes{
-
+ + {abstract} calc()
 }
 
-class Taster1 {
- + Taster1()
-}
-
-class Taster2{
- + Taster2()
+class Taster {
+ + Taster()
 }
 
 class FlipFlop{
@@ -29,6 +25,12 @@ class LED2{
  + LED2()
 }
 
+class AND{
+ + AND()
+}
 
+Componetes <|-- FlipFlop
+Componetes <|-- AND
+Componetes <|-- Taster
 
 @enduml
