@@ -1,0 +1,37 @@
+@startuml
+
+abstract class Components{
+ + {abstract} calc()
+}
+
+class Taster {
+ + Taster()
+ + {abstract} calc()
+}
+
+class FlipFlop{
+ + FlipFlop()
+ + state: int
+ + set()
+ + reset()
+ + q()
+ + notQ()
+ + {abstract} calc()
+}
+
+class LED{
+ + LED()
+ + {abstract} calc()
+}
+
+class AND{
+ + AND()
+ + {abstract} calc()
+}
+
+Components <|-- FlipFlop
+Components <|-- AND
+Components <|-- LED
+Components <|-- Taster
+
+@enduml
