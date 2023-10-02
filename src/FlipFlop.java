@@ -1,7 +1,7 @@
 /**
  * @author aligr
  */
-public class FlipFlop {
+public class FlipFlop extends Components {
 
     /**
      * Variable vom State/Status
@@ -59,4 +59,8 @@ public class FlipFlop {
     }
 
 
+    @Override
+    void calc() {
+        
+    }
 }
