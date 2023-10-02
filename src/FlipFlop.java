@@ -7,6 +7,10 @@ public class FlipFlop extends Components {
         super(name,2);
     }
 
+    public void set(int outputPin){
+        this.pinsOut.set(outputPin,(!this.get(outputPin)));
+    }
+
     @Override
     void calc() {
         if (this.getInputPort(0)){
@@ -17,6 +21,8 @@ public class FlipFlop extends Components {
             this.pinsOut.set(1,true);
         }
     }
+
+
 }
 
 

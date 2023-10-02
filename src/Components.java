@@ -51,4 +51,8 @@ abstract  class Components {
         return this.pinsIn.get(inputPort).state;
     }
 
+    public boolean get(int outputPin){
+        return this.pinsOut.get(outputPin);
+    }
+
 }

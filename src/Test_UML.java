@@ -14,7 +14,10 @@ public class Test_UML {
         led.connect(0,FF,0);
         led2.connect(0,FF,1);
 
-        System.out.println(FF.getInputPort(0));
+        FF.set(1);
+        System.out.println(led2.get(0));
+        System.out.println(led.get(0));
+
 
     }
 }
@@ -26,6 +29,14 @@ class Taster extends Components{
         /**
          * Brauchen wir nicht nur damit keine Fehler auftretten
          */
+    }
+
+    public void press(){
+        this.pinsOut.set(0,true);
+    }
+
+    public void release(){
+        this.pinsOut.set(0,false);
     }
 
     @Override
