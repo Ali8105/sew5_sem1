@@ -21,8 +21,14 @@ public class FlipFlop {
         return !state;
     }
 
-    public static void main(String[] args) {
+    public String toString(){
+        return Boolean.toString(state);
+    }
 
+    public static void main(String[] args) {
+        FlipFlop f = new FlipFlop();
+        f.Set();
+        System.out.println(f);
     }
 
 
