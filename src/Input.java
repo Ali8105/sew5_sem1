@@ -24,5 +24,5 @@ public class Input {
         this.srcPort = srcPort;
         this.component = component;
     }
-    
+
 }
