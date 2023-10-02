@@ -11,14 +11,14 @@ public class FlipFlop {
     /**
      * Set Interface
      */
-    public void Set(){
+    public void set(){
         state = true;
     }
 
     /**
      * Reset Interface
      */
-    public void Reset(){
+    public void reset(){
         state = false;
     }
 
@@ -48,13 +48,13 @@ public class FlipFlop {
 
     /**
      * Testen der FlipFlop Klasse
-     * @param args
+     * @param args Commandlineparameter
      */
     public static void main(String[] args) {
         FlipFlop f = new FlipFlop();
-        f.Set();
+        f.set();
         System.out.println(f);
-        f.Reset();
+        f.reset();
         System.out.println(f);
     }
 
