@@ -1,9 +1,25 @@
 @startuml
 
-class Taster1
-class Taster2
-class FlipFlop
-class LED1
-class LED2
+class Taster1 {
+ + Taster1()
+}
+
+class Taster2{
+ + Taster2()
+}
+
+class FlipFlop{
+ + FlipFlop()
+}
+
+class LED1{
+ + LED1()
+}
+
+class LED2{
+ + LED2()
+}
+
+
 
 @enduml
