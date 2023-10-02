@@ -12,7 +12,11 @@ abstract  class Components {
      */
     String name;
 
-
+    /**
+     * List von Input Pins
+     */
+    List<Input> pinsIn;
+    
     abstract void calc();
 
 }
