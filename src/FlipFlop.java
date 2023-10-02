@@ -46,6 +46,16 @@ public class FlipFlop extends Components {
         return Boolean.toString(state);
     }
 
+    @Override
+    void calc() {
+
+    }
+
+    @Override
+    void push() {
+        // don't in use
+    }
+
     /**
      * Testen der FlipFlop Klasse
      * @param args Commandlineparameter
@@ -57,15 +67,8 @@ public class FlipFlop extends Components {
         f.reset();
         System.out.println(f);
     }
-
-
-    @Override
-    void calc() {
-
-    }
-
-    @Override
-    void push() {
-        
-    }
 }
+
+
+
+
