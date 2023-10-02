@@ -17,12 +17,8 @@ class FlipFlop{
  + notQ()
 }
 
-class LED1{
- + LED1()
-}
-
-class LED2{
- + LED2()
+class LED{
+ + LED()
 }
 
 class AND{
