@@ -29,6 +29,8 @@ public class FlipFlop {
         FlipFlop f = new FlipFlop();
         f.Set();
         System.out.println(f);
+        f.Reset();
+        System.out.println(f);
     }
 
 
