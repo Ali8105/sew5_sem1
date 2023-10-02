@@ -61,6 +61,11 @@ public class FlipFlop extends Components {
 
     @Override
     void calc() {
+
+    }
+
+    @Override
+    void push() {
         
     }
 }
