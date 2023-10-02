@@ -27,6 +27,19 @@ abstract  class Components {
         }
     }
 
+    /**
+     * calc für die jeweiligen Komponenten Klassen
+     */
     abstract void calc();
+
+    /**
+     * um zwei Konstruktor zu verbinden
+     * @param srcPort
+     * @param comp
+     * @param destPort
+     */
+    public void connect(int srcPort, Components comp, int destPort){
+        this.pinsIn.add(srcPort,new Input(destPort,comp));
+    }
 
 }
