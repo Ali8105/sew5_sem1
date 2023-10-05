@@ -14,11 +14,6 @@ public class Test_UML {
         led.connect(0,FF,0);
         led2.connect(0,FF,1);
 
-        FF.set(1);
-        System.out.println(led2.get(0));
-        System.out.println(led.get(0));
-
-
     }
 }
 
