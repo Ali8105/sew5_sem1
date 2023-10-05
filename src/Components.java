@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author aligr
+ */
 abstract  class Components {
 
     /**
@@ -18,6 +21,11 @@ abstract  class Components {
      */
     List<Input> pinsIn;
 
+    /**
+     * Komponenten Konstruktor
+     * @param name Name der Konstruktor
+     * @param outputs Anzahl der Output int
+     */
     public Components(String name, int outputs){
         this.name = name;
         pinsOut = new ArrayList<>();
@@ -61,7 +69,11 @@ abstract  class Components {
     }
 
 
-
+    /**
+     *
+     * @param outputPin Welcher Output Int soll angeschaut werden
+     * @return ob der Output Pin on/off ist
+     */
     public boolean getOutputPin(int outputPin){
         return this.pinsOut.get(outputPin);
     }
