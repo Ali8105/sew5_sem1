@@ -1,28 +1,57 @@
 @startuml
 
-abstract class Components{
- + {abstract} calc()
+abstract class Components {
+        # pinsOut : List<Boolean>
+        - name : String
+        - pinsIn : List<Input>
+        + Component()
+        + Component()
+        {abstract} + calc()
+        + connect()
+        + fetchInput()
+        + get()
+        + getInputPort()
+        + toString()
+    }
+
+class Takt {
+  - components : List<Component>
+  + Takt()
+  + addAll()
+  + trigger()
 }
 
 class Taster {
- + Taster()
- + {abstract} calc()
+    + Taster()
+    + calc()
+    + press()
+    + release()
 }
 
-class FlipFlop{
- + FlipFlop()
- + state: int
- + set()
- + reset()
- + q()
- + notQ()
- + {abstract} calc()
+class FlipFlop {
+    + FlipFlop()
+    + calc()
 }
 
-class LED{
- + LED()
- + {abstract} calc()
+
+class LED {
+  + LED()
+  + calc()
 }
+
+ class Input {
+        + component : Component
+        + srcPort : Integer
+        + state : boolean
+        + Input()
+        + Input()
+        + getSrcComponent()
+        + getSrcPort()
+        + isState()
+        + setSrcComponent()
+        + setSrcPort()
+        + setState()
+    }
 
 class AND{
  + AND()
@@ -33,5 +62,7 @@ Components <|-- FlipFlop
 Components <|-- AND
 Components <|-- LED
 Components <|-- Taster
+Input o-- Components : srcComponent
+Takt o-- Components
 
 @enduml
