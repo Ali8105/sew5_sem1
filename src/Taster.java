@@ -4,6 +4,11 @@
  */
 class Taster extends Components{
 
+    /**
+     * Konstruktor
+     * Es wird nur ein Parameter angenommen, da Taster nur einen Out Int haben
+     * @param name Name des Tasters
+     */
     Taster(String name){
         super(name, 1);
     }
