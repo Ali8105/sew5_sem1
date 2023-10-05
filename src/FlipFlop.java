@@ -3,10 +3,19 @@
  */
 public class FlipFlop extends Components {
 
+    /**
+     * Konstruktor für das Erstellen von FlipFlops
+     * @param name Name vom FlipFlop
+     */
     public FlipFlop(String name){
         super(name,2);
     }
 
+
+    /**
+     * Berechnet, welchen State der Output Pin haben soll
+     * extends von Components
+     */
     @Override
     void calc() {
         if (this.getInputPort(0)){
