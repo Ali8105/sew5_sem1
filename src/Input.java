@@ -25,6 +25,14 @@ public class Input {
         this.component = component;
     }
 
+    /**
+     * get Src Component
+     * @return this component
+     */
+    public Components getSrcComponent(){
+        return this.component;
+    }
+
     public void setState(boolean state){
         this.state = state;
     }

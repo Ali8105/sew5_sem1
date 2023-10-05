@@ -9,4 +9,10 @@ public class Takt   {
         this.comp = new ArrayList<>();
         comp.addAll(Arrays.asList(components));
     }
+
+    public void trigger(){
+        for (Components components: comp){
+
+        }
+    }
 }

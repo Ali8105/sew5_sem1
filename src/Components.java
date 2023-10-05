@@ -51,7 +51,11 @@ abstract  class Components {
         return this.pinsIn.get(inputPort).state;
     }
 
-
+    public void fetchInput(){
+        for (Input input: pinsIn){
+            input.setState(input.getSrcComponent().pinsOut.get(input.srcPort));
+        }
+    }
 
 
 }
