@@ -69,6 +69,17 @@ abstract  class Components {
     @Override
     public String toString() {
 
-        return "";
+        StringBuilder sb = new StringBuilder();
+        for (Input input : this.pinsIn) {
+            sb.append(input.state);
+            sb.append(" ");
+        }
+        sb.append(": ");
+        for (boolean b : this.pinsOut) {
+            sb.append(b);
+            sb.append(" ");
+        }
+        return this.name + "( " + sb + ")";
+
     }
 }

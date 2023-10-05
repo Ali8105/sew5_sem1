@@ -14,10 +14,10 @@ public class Takt   {
         for (Components components: comp){
             System.out.println("1.Phase");
             components.fetchInput();;
-            System.out.println(components.getOutputPin(0));
+            System.out.println(components);
             System.out.println("2.Phase");
             components.calc();
-            System.out.println(components.getOutputPin(0));
+            System.out.println(components);
         }
     }
 }

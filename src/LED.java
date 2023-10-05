@@ -1,11 +1,15 @@
 public class LED extends Components{
 
-    public LED(String name, int outputs) {
-        super(name, outputs);
+    /**
+     * Da eine LED immer nur einen Anschluss hat ... auf 1 setzen
+     * @param name Name des Components
+     */
+    public LED(String name) {
+        super(name, 1);
     }
 
     @Override
     void calc() {
-
+        this.pinsOut.set(0,(this.getInputPort(0)));
     }
 }

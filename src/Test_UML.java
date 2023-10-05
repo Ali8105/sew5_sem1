@@ -5,20 +5,19 @@ public class Test_UML {
         Taster taster1 = new Taster("taster1");
         Taster taster2 = new Taster("taster2");
         FlipFlop FF = new FlipFlop("FF");
-        LED led = new LED("LED1",1);
-        LED led2 = new LED("LED2",1);
+        LED led = new LED("LED1");
         FF.connect(0, taster1, 0);
         FF.connect(1,taster2,0);
         led.connect(0,FF,0);
 
-        Takt takt = new Takt(taster1,taster2,FF,led,led2);
+        Takt takt = new Takt(taster1,taster2,FF,led);
+        takt.trigger();
+        System.out.println(led.getOutputPin(0) + " my first test");
+
         taster1.press();
         takt.trigger();
-        System.out.println(led.getOutputPin(0));
-        taster1.press();
-        System.out.println(led2.getOutputPin(0));
-        taster2.press();
-        System.out.println(led.getInputPort(0));
+        System.out.println(led.getOutputPin(0) + " my second test");
+
 
 
     }
