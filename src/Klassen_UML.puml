@@ -1,28 +1,50 @@
 @startuml
 
-abstract class Components{
- + {abstract} calc()
-}
+abstract class Components {
+        # pinsOut : List<Boolean>
+        - name : String
+        - pinsIn : List<Input>
+        + Component()
+        + Component()
+        {abstract} + calc()
+        + connect()
+        + fetchInput()
+        + get()
+        + getInputPort()
+        + toString()
+    }
+
+
 
 class Taster {
  + Taster()
  + {abstract} calc()
 }
 
-class FlipFlop{
- + FlipFlop()
- + state: int
- + set()
- + reset()
- + q()
- + notQ()
- + {abstract} calc()
+class FF {
+    + FF()
+    + calc()
 }
+
 
 class LED{
  + LED()
  + {abstract} calc()
 }
+
+ class Input {
+        + component : Component
+        + srcPort : Integer
+        + state : boolean
+        + Input()
+        + Input()
+        + getSrcComponent()
+        + getSrcPort()
+        + isState()
+        + setSrcComponent()
+        + setSrcPort()
+        + setState()
+    }
 
 class AND{
  + AND()
