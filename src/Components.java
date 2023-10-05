@@ -43,6 +43,15 @@ abstract  class Components {
     }
 
     /**
+     * set the state
+     */
+    public void fetchInput(){
+        for (Input input: pinsIn){
+            input.setState(input.getSrcComponent().pinsOut.get(input.srcPort));
+        }
+    }
+
+    /**
      *
      * @param inputPort vom inpout Port
      * @return liefert den status
@@ -51,15 +60,15 @@ abstract  class Components {
         return this.pinsIn.get(inputPort).state;
     }
 
-    public void fetchInput(){
-        for (Input input: pinsIn){
-            input.setState(input.getSrcComponent().pinsOut.get(input.srcPort));
-        }
-    }
+
 
     public boolean getOutputPin(int outputPin){
         return this.pinsOut.get(outputPin);
     }
 
+    @Override
+    public String toString() {
 
+        return "";
+    }
 }
