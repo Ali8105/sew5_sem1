@@ -57,5 +57,9 @@ abstract  class Components {
         }
     }
 
+    public boolean getOutputPin(int outputPin){
+        return this.pinsOut.get(outputPin);
+    }
+
 
 }

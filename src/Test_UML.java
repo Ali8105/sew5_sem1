@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 
 public class Test_UML {
 
@@ -12,10 +11,15 @@ public class Test_UML {
         FF.connect(1,taster2,0);
         led.connect(0,FF,0);
 
-        Takt takt = new Takt(taster1,taster2,FF,led);
+        Takt takt = new Takt(taster1,taster2,FF,led,led2);
         taster1.press();
         takt.trigger();
-        System.out.println(led);
+        System.out.println(led.getOutputPin(0));
+        taster1.press();
+        System.out.println(led2.getOutputPin(0));
+        taster2.press();
+        System.out.println(led.getInputPort(0));
+
 
     }
 }
