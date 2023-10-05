@@ -12,7 +12,12 @@ public class Takt   {
 
     public void trigger(){
         for (Components components: comp){
-
+            System.out.println("1.Phase");
+            components.fetchInput();;
+            System.out.println(components);
+            System.out.println("2.Phase");
+            components.calc();
+            System.out.println(components);
         }
     }
 }
