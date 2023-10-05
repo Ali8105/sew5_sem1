@@ -78,6 +78,10 @@ abstract  class Components {
         return this.pinsOut.get(outputPin);
     }
 
+    /**
+     * Überschreiben der toString Methode 
+     * @return
+     */
     @Override
     public String toString() {
 
