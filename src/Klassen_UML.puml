@@ -14,22 +14,29 @@ abstract class Components {
         + toString()
     }
 
-
-
-class Taster {
- + Taster()
- + {abstract} calc()
+class Takt {
+  - components : List<Component>
+  + Takt()
+  + addAll()
+  + trigger()
 }
 
-class FF {
-    + FF()
+class Taster {
+    + Taster()
+    + calc()
+    + press()
+    + release()
+}
+
+class FlipFlop {
+    + FlipFlop()
     + calc()
 }
 
 
-class LED{
- + LED()
- + {abstract} calc()
+class LED {
+  + LED()
+  + calc()
 }
 
  class Input {
@@ -55,5 +62,7 @@ Components <|-- FlipFlop
 Components <|-- AND
 Components <|-- LED
 Components <|-- Taster
+Input o-- Components : srcComponent
+Takt o-- Components
 
 @enduml
