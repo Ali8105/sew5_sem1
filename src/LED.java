@@ -8,6 +8,9 @@ public class LED extends Components{
         super(name, 1);
     }
 
+    /**
+     * Berechnet den Status
+     */
     @Override
     void calc() {
         this.pinsOut.set(0,(this.getInputPort(0)));

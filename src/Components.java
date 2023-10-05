@@ -79,7 +79,7 @@ abstract  class Components {
     }
 
     /**
-     * Überschreiben der toString Methode 
+     * Überschreiben der toString Methode
      * @return
      */
     @Override
