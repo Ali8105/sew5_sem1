@@ -1,4 +1,7 @@
-
+/**
+ * @author aligr
+ * Klasse zum Testen
+ */
 public class Test_UML {
 
     public static void main(String[] args) {

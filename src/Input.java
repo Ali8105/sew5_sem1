@@ -35,7 +35,7 @@ public class Input {
 
     /**
      * Setzt den Status
-     * @param state true/false 
+     * @param state true/false
      */
     public void setState(boolean state){
         this.state = state;
