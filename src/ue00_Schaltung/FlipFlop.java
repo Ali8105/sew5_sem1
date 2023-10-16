@@ -15,6 +15,6 @@ public class FlipFlop extends Komponente {
 
     @Override
     void calc() {
-        
+
     }
 }
