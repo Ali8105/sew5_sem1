@@ -29,6 +29,12 @@ public class FlipFlop extends Komponente {
      */
     static int not_Q = 1;
 
+    /**
+     * Konstruktor FLipFlop geerbt von Komponenten
+     * @param name Name vom Komponente
+     * @param inputs Liste von Inputs
+     * @param outputs Liste von Outputs
+     */
     FlipFlop(String name, List<Schnittstelle> inputs, List<Schnittstelle> outputs) {
         super(name, inputs, outputs);
     }
