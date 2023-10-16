@@ -30,6 +30,8 @@ public class FlipFlop extends Komponente {
             outputs.get(not_Q).setState(!state);
         }else if (inputs.get(set).getState()){
             state = true;
+            outputs.get(Q).setState(state);
+            outputs.get(not_Q).setState(!state);
         }
     }
 }
