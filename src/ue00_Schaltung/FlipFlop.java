@@ -23,8 +23,13 @@ public class FlipFlop extends Komponente {
 
     @Override
     void calc() {
-        if (inputs.get(reset) != null && inputs.get(reset).getState()){
+        // Wenn reset gedrückt wurde
+        if (inputs.get(reset).getState()){
             state = false;
+            outputs.get(Q).setState(state);
+            outputs.get(not_Q).setState(!state);
+        }else if (inputs.get(set).getState()){
+            state = true;
         }
     }
 }
