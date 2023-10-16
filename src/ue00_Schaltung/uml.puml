@@ -1,0 +1,57 @@
+@startuml
+
+abstract class Component {
+String name
+List<Input> inputs
+List<Output> outputs
+Component(name, inputs, outputs)
+calcState()
+}
+
+class Taster{
+Output out
+Taster(output)
+press()
+release()
+}
+
+abstract class Schnittstelle{
+boolean state
+Schnittstelle(state)
+getState()
+setState(state)
+}
+
+
+class Input{
+Component comp
+Input(component)
+}
+
+class Output{
+List<Input> inputs
+Output(inputs)
+}
+
+class FF{
+boolean state
+int set
+int reset
+int q
+int not_q
+FF(name, inputs, outputs)
+calcState()
+}
+
+class LED{
+boolean isOn
+LED(boolean)
+calcState()
+}
+
+Component <|-- FF
+
+Component <|-- LED
+Schnittstelle <|-- Input
+Schnittstelle <|-- Output
+@enduml

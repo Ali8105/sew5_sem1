@@ -8,7 +8,7 @@ public class FlipFlop extends Komponente {
     /**
      * gib die State an
      */
-    boolean state = false;
+    static boolean state = false;
 
     /**
      * Interface set
@@ -18,7 +18,7 @@ public class FlipFlop extends Komponente {
     /**
      * Interface reset
      */
-    static int reset = 0;
+    static int reset = 1;
 
     /**
      * Out Int Q
@@ -40,6 +40,11 @@ public class FlipFlop extends Komponente {
         super(name, inputs, outputs);
     }
 
+    /**
+     * calc von Komponente geerbt
+     * berechnet die State
+     * @Override
+     */
     @Override
     void calc() {
         // Wenn Reset
@@ -53,8 +58,12 @@ public class FlipFlop extends Komponente {
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
         }
+
     }
 
+    /**
+     * Main Methode
+     */
     public static void main(String[] args) {
         Schnittstelle s = new Schnittstelle();
         Schnittstelle rs = new Schnittstelle();
