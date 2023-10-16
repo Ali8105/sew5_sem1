@@ -15,6 +15,8 @@ public class FlipFlop extends Komponente {
 
     static int Q = 0;
 
+    static int not_Q = 1;
+
     FlipFlop(String name, List<Schnittstelle> inputs, List<Schnittstelle> outputs) {
         super(name, inputs, outputs);
     }
