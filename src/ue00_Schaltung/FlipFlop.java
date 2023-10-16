@@ -48,12 +48,12 @@ public class FlipFlop extends Komponente {
     @Override
     void calc() {
         // Wenn Reset
-        if (inputs.get(reset) != null && inputs.get(reset).getState()){
+        if (inputs.get(reset).getState()){
             state = false;
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
         }// Wenn Set
-        else if (inputs.get(set) != null && inputs.get(set).getState()){
+        else if ( inputs.get(set).getState()){
             state = true;
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
