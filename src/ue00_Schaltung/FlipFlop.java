@@ -1,5 +1,6 @@
 package ue00_Schaltung;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class FlipFlop extends Komponente {
@@ -42,15 +43,40 @@ public class FlipFlop extends Komponente {
     @Override
     void calc() {
         // Wenn Reset
-        if (inputs.get(reset).getState()){
+        if (inputs.get(reset) != null && inputs.get(reset).getState()){
             state = false;
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
         }// Wenn Set
-        else if (inputs.get(set).getState()){
+        else if (inputs.get(set) != null && inputs.get(set).getState()){
             state = true;
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
         }
+    }
+
+    public static void main(String[] args) {
+        Schnittstelle s = new Schnittstelle();
+        Schnittstelle rs = new Schnittstelle();
+        Schnittstelle q = new Schnittstelle();
+        Schnittstelle nq = new Schnittstelle();
+
+
+        FlipFlop f = new FlipFlop("FF1", Arrays.asList(s, rs), Arrays.asList(q, nq));
+
+        s.setState(true);
+        f.calc();
+        System.out.println(q.getState());
+        System.out.println(nq.getState());
+
+        rs.setState(true);
+        f.calc();
+        System.out.println(q.getState());
+        System.out.println(nq.getState());
+
+        rs.setState(false);
+        f.calc();
+        System.out.println(q.getState());
+        System.out.println(nq.getState());
     }
 }
