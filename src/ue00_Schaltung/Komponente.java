@@ -7,5 +7,9 @@ abstract  class Komponente {
     List<Schnittstelle> inputs;
     List<Schnittstelle> outputs;
 
+    Komponente(){
+        
+    }
+
     abstract void calc();
 }
