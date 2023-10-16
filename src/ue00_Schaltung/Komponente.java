@@ -12,4 +12,5 @@ abstract  class Komponente {
     }
 
     abstract void calc();
+
 }
