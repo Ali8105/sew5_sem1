@@ -1,3 +1,5 @@
+package vomLetztemJahr;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +43,7 @@ abstract  class Components {
     abstract void calc();
 
     /**
-     * um zwei Konstruktor zu verbinden
+     * um zwei Komponenten zu verbinden
      * @param srcPort
      * @param comp
      * @param destPort

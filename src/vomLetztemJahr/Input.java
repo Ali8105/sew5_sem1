@@ -1,3 +1,5 @@
+package vomLetztemJahr;
+
 public class Input {
 
     /**

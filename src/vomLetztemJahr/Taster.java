@@ -1,3 +1,5 @@
+package vomLetztemJahr;
+
 /**
  * @author aligr
  * Klasse Taster

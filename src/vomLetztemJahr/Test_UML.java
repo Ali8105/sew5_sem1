@@ -1,3 +1,5 @@
+package vomLetztemJahr;
+
 /**
  * @author aligr
  * Klasse zum Testen
@@ -20,7 +22,6 @@ public class Test_UML {
         taster1.press();
         takt.trigger();
         System.out.println(led.getOutputPin(0) + " my second test");
-
 
 
     }
