@@ -7,8 +7,8 @@ abstract  class Komponente {
     List<Schnittstelle> inputs;
     List<Schnittstelle> outputs;
 
-    Komponente(){
-        
+    Komponente(String name, List<Schnittstelle> inputs, List<Schnittstelle> outputs){
+
     }
 
     abstract void calc();
