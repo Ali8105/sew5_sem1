@@ -9,12 +9,24 @@ public class FlipFlop extends Komponente {
      */
     boolean state = false;
 
+    /**
+     * Interface set
+     */
     static int set = 0;
 
+    /**
+     * Interface reset
+     */
     static int reset = 0;
 
+    /**
+     * Out Int Q
+     */
     static int Q = 0;
 
+    /**
+     * Out Int not Q
+     */
     static int not_Q = 1;
 
     FlipFlop(String name, List<Schnittstelle> inputs, List<Schnittstelle> outputs) {
@@ -23,12 +35,13 @@ public class FlipFlop extends Komponente {
 
     @Override
     void calc() {
-        // Wenn reset gedrückt wurde
+        // Wenn Reset
         if (inputs.get(reset).getState()){
             state = false;
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
-        }else if (inputs.get(set).getState()){
+        }// Wenn Set
+        else if (inputs.get(set).getState()){
             state = true;
             outputs.get(Q).setState(state);
             outputs.get(not_Q).setState(!state);
