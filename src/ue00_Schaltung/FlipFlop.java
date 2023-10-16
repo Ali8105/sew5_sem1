@@ -1,4 +1,4 @@
 package ue00_Schaltung;
 
-public class FlipFlop {
+public class FlipFlop extends Komponente {
 }
