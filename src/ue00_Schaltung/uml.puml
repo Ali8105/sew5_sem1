@@ -10,7 +10,8 @@ calcState()
 
 class Taster{
 Output out
-Taster(output)
+Taster(name, 0, output)
+calcState()
 press()
 release()
 }
@@ -54,4 +55,6 @@ Component <|-- FF
 Component <|-- LED
 Schnittstelle <|-- Input
 Schnittstelle <|-- Output
+
+Component <|-- Taster
 @enduml

@@ -26,7 +26,7 @@ public class FlipFlop extends Komponente {
     static int Q = 0;
 
     /**
-     * Out Int not Q
+     * Out Int not_Q
      */
     static int not_Q = 1;
 
@@ -71,7 +71,7 @@ public class FlipFlop extends Komponente {
         Schnittstelle nq = new Schnittstelle();
 
 
-        FlipFlop f = new FlipFlop("FF1", Arrays.asList(s, rs), Arrays.asList(q, nq));
+        FlipFlop f = new FlipFlop("FF", Arrays.asList(s, rs), Arrays.asList(q, nq));
 
         s.setState(true);
         f.calc();
