@@ -1,5 +1,9 @@
+package Labyrinth;
 
-//TODO: Mein Name in der Javadoc
+
+/**
+ * @author aligr
+ */
 
 public class Labyrinth {
 	public static String[][] maps = {{
@@ -76,6 +80,9 @@ public class Labyrinth {
 	 */
 	public static void printLabyrinth(char[][] lab) {
 		// TODO Code fehlt noch
+		for (int i = 0; i < lab.length; i++) {
+			System.out.println(lab[i]);
+		}
 	}
 
 	/**
